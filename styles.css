@@ -80,6 +80,10 @@ h1 {
   margin-right: 140px;
 }
 
+.sid-cons .material-symbols-outlined {
+  display: none;
+}
+
 .toolbar {
   border-radius: 20px;
   background-color: #fff;
@@ -88,30 +92,38 @@ h1 {
 /* start of media query */
 
 @media (max-width: 470px) {
-  .sid-cons {
+  h1 {
+    font-size: 30px;
+    margin-left: 30px;
+    font-weight: 900;
+    width: 50%;
+  }
+
+  .sid-cons .material-symbols-outlined {
     display: block;
   }
 
-  h1 {
-    font-size: 20px;
-    margin-left: 30px;
-    font-weight: 900;
-    width: 80%;
+  .sid-cons li {
+    display: none;
   }
 
   .item3 {
     font-size: 12px;
     margin-left: 30px;
-    width: 90%;
+    width: 70%;
   }
 
   .contact {
-    align-self: center;
+    margin-left: 25px;
     font-size: 10px;
   }
 
   .icons img {
     width: 10px;
+  }
+
+  .icons {
+    margin-left: 0;
   }
 }
 
@@ -250,6 +262,13 @@ h1 {
 
 .tap {
   cursor: pointer;
+  padding: 15px;
+  color: #396df2;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #396df2;
 }
 
 /* media query for the above card */
@@ -295,12 +314,18 @@ h1 {
   }
 
   .languages {
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
 
   .tap {
-    padding-left: 60px;
-    width: 5%;
+    width: 10%;
+    height: 3%;
+    font-size: 10px;
+  }
+
+  button.tap {
+    position: relative;
+    margin-left: 80px;
   }
 }
 
@@ -354,14 +379,30 @@ h1 {
 }
 
 .blind {
-  width: 20%;
-  margin-top: 20px;
   cursor: pointer;
+  color: #396df2;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #396df2;
+  max-width: 120px;
+  max-height: 110px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .see {
-  margin-bottom: 20px;
-  width: 35%;
+  background-color: #396df2;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 8px;
+  border: 2px solid #396df2;
+  max-width: 120px;
+  max-height: 110px;
+  padding: 10px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -394,13 +435,14 @@ h1 {
   }
 
   .blind {
-    padding-left: 60px;
-    width: 5%;
+    padding-left: 2px;
+    width: 10%;
     margin-bottom: 100px;
   }
 
   .see {
-    width: 8%;
+    width: 18%;
+    height: 4%;
     margin-bottom: 90px;
     margin-left: 40px;
   }
@@ -532,6 +574,14 @@ hr.solid {
   margin-left: 80px;
   cursor: pointer;
   margin-bottom: 184px;
+  width: 30%;
+  padding: 10px;
+  background-color: #fff;
+  color: #396df2;
+  font-size: 17px;
+  font-weight: 700;
+  border: 2px solid #396df2;
+  border-radius: 10px;
 }
 
 /* media query for about me */
@@ -564,7 +614,7 @@ hr.solid {
   }
 
   .press {
-    width: 40%;
+    width: 30%;
     margin-bottom: 90px;
     margin-left: 60px;
   }
@@ -688,6 +738,18 @@ hr.solid {
   margin-left: 20px;
   margin-bottom: 20px;
   cursor: pointer;
+  width: 15%;
+  padding: 10px;
+  background-color: #fff;
+  color: #396df2;
+  font-size: 17px;
+  font-weight: 700;
+  border: 2px solid #396df2;
+  border-radius: 10px;
+}
+
+button:hover {
+  text-decoration: underline 2px #396df2;
 }
 
 /* media query for the contact-part */
