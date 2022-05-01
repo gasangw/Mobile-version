@@ -93,10 +93,14 @@ h1 {
 
 @media (max-width: 470px) {
   h1 {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 30px;
-    font-weight: 900;
+    font-weight: 800;
     width: 50%;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   .sid-cons .material-symbols-outlined {
@@ -196,7 +200,7 @@ h1 {
 .canop li:nth-child(1) {
   color: #344563;
   vertical-align: top;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 24px;
   font-weight: 700;
 }
@@ -300,6 +304,10 @@ h1 {
 
   .languages li:nth-child(n) {
     font-size: 10px;
+    margin-left: 20px;
+  }
+
+  .canop li:nth-child(1) {
     margin-left: 20px;
   }
 
@@ -749,7 +757,11 @@ hr.solid {
 }
 
 button:hover {
-  text-decoration: underline 2px #396df2;
+  background-color: #6070ff;
+}
+
+button:active {
+  background-color: #2230d2;
 }
 
 /* media query for the contact-part */
