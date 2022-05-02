@@ -198,6 +198,11 @@ h1 {
 
 .languages-2 {
   margin-left: 40px;
+  display: flex;
+  align-self: flex-start;
+  padding-left: 0;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 button {
@@ -346,7 +351,6 @@ button {
     margin-left: 20px;
     width: 20%;
     font-size: 10px;
-    margin-left: 20px;
   }
 
   .languages {
@@ -404,14 +408,6 @@ button {
   height: 430px;
   width: 500px;
   margin: 40px 20px 0 20px;
-}
-
-.languages-2 {
-  display: flex;
-  align-self: flex-start;
-  padding-left: 0;
-  gap: 10px;
-  margin-top: 15px;
 }
 
 .blind {
@@ -554,7 +550,7 @@ header {
   line-height: 24px;
   justify-content: baseline;
   justify-content: space-between;
- padding-left: 10px;
+  padding-left: 10px;
   margin-top: 100px;
 }
 
