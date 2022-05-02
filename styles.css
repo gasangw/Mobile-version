@@ -25,9 +25,9 @@
 
   display: flex;
   align-content: flex-start;
-  background-image: url(./images/background.png);
+  background-image: url(./images/Header\ bck.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 h1 {
@@ -42,6 +42,10 @@ h1 {
   font-weight: 700;
   font-style: bold;
   font-family: "Poppins", sans-serif;
+}
+
+.items1 {
+  margin-top: 60px;
 }
 
 .item3 {
@@ -76,7 +80,7 @@ h1 {
   gap: 20px;
   list-style: none;
   margin-left: 140px;
-  margin-bottom: 70px;
+  margin-bottom: 120px;
   margin-right: 140px;
 }
 
@@ -101,6 +105,10 @@ h1 {
 
   body {
     overflow-x: hidden;
+  }
+
+  .headline-container {
+    background-size: contain;
   }
 
   .sid-cons .material-symbols-outlined {
@@ -166,6 +174,7 @@ h1 {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  margin-left: 40px;
 }
 
 .name {
@@ -184,6 +193,15 @@ h1 {
   padding-left: 0;
   gap: 10px;
   margin-top: 20px;
+  margin-left: 40px;
+}
+
+.languages-2 {
+  margin-left: 40px;
+}
+
+button {
+  margin-left: 40px;
 }
 
 .snapshoot img {
@@ -191,10 +209,10 @@ h1 {
 }
 
 .icon li {
-  display: inline-block;
   list-style: none;
   margin-left: 40px;
-  gap: 5px;
+  position: relative;
+  display: inline-flex;
 }
 
 .canop li:nth-child(1) {
@@ -220,13 +238,16 @@ h1 {
   margin-bottom: 30px;
 }
 
+.word-2 {
+  margin-right: 40px;
+}
+
 .languages-2 li:nth-child(n) {
   border: 1px;
   border-radius: 8px;
   padding: 5px 12px 5px 12px;
   background-color: #ebebff;
   color: #6070ff;
-  letter-spacing: 3%;
   font-size: 15px;
   text-emphasis-style: medium;
   text-align: center;
@@ -251,7 +272,7 @@ h1 {
   color: #344563;
   vertical-align: text-top;
   line-height: 24px;
-  margin: 0;
+  margin-left: 40px;
 }
 
 .canop {
@@ -316,6 +337,13 @@ h1 {
   }
 
   .word {
+    width: 20%;
+    font-size: 10px;
+    margin-left: 20px;
+  }
+
+  .word-2 {
+    margin-left: 20px;
     width: 20%;
     font-size: 10px;
     margin-left: 20px;
@@ -473,8 +501,8 @@ h1 {
 
 .me {
   column-count: 2;
-  column-gap: 20px;
   border-top-right-radius: 80px;
+  column-gap: 5px;
   background: #fff;
 }
 
@@ -485,7 +513,7 @@ h1 {
   color: #091e42;
   width: 40px;
   margin-left: 80px;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 header {
@@ -501,6 +529,8 @@ header {
   color: #7f8cff;
   font-size: 15px;
   margin-left: 80px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 .hello {
@@ -508,15 +538,15 @@ header {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin-right: 30px;
   margin-left: 80px;
+  width: 70%;
 }
 
 .lang {
   display: flex;
   flex-direction: column;
-  margin-right: 120px;
   margin-bottom: 80px;
+  width: 90%;
 }
 
 .start {
@@ -524,8 +554,8 @@ header {
   line-height: 24px;
   justify-content: baseline;
   justify-content: space-between;
-  padding-left: 10px;
-  margin-top: 60px;
+ padding-left: 10px;
+  margin-top: 100px;
 }
 
 .lan {
@@ -581,7 +611,7 @@ hr.solid {
 .press {
   margin-left: 80px;
   cursor: pointer;
-  margin-bottom: 184px;
+  margin-bottom: 168px;
   width: 30%;
   padding: 10px;
   background-color: #fff;
@@ -657,7 +687,6 @@ hr.solid {
   border-top-left-radius: 80px;
   background-image: url(./images/contactformback.png);
   background-size: cover;
-  margin-bottom: 120px;
   padding-top: 80px;
 }
 
@@ -758,6 +787,7 @@ hr.solid {
 
 button:hover {
   background-color: #6070ff;
+  color: #fff;
 }
 
 button:active {
