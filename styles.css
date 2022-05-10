@@ -1,23 +1,50 @@
-.nav-bar {
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
-  font-style: normal;
-  justify-content: space-between;
-  color: blue;
-  margin: 40px;
+li {
+  list-style: none;
 }
 
-.sid-cons {
+a {
+  text-decoration: none;
+}
+
+.navbar {
   display: flex;
-  align-items: flex-end;
-  position: relative;
-  font-size: 15px;
-  line-height: 20px;
-  gap: 20px;
-  font-weight: 600;
-  color: #344563;
-  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #475569;
+}
+
+.nav-link:hover {
+  color: #482ff7;
 }
 
 .headline-container {
@@ -65,16 +92,6 @@ h1 {
   margin-left: 180px;
 }
 
-.sid-icon {
-  display: flex;
-  position: inline-block;
-  right: 56px;
-  gap: 20px;
-  list-style: none;
-  margin-left: 140px;
-  margin-bottom: 70px;
-}
-
 .icons {
   display: flex;
   gap: 20px;
@@ -84,18 +101,47 @@ h1 {
   margin-right: 140px;
 }
 
-.sid-cons .material-symbols-outlined {
-  display: none;
-}
-
-.toolbar {
-  border-radius: 20px;
-  background-color: #fff;
-}
-
 /* start of media query */
 
 @media (max-width: 470px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   h1 {
     font-size: 20px;
     margin-left: 30px;
@@ -109,14 +155,6 @@ h1 {
 
   .headline-container {
     background-size: contain;
-  }
-
-  .sid-cons .material-symbols-outlined {
-    display: block;
-  }
-
-  .sid-cons li {
-    display: none;
   }
 
   .item3 {
