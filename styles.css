@@ -20,7 +20,7 @@ a {
 .bar {
   display: block;
   width: 25px;
-  height: 3px;
+  height: 2px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -105,7 +105,7 @@ h1 {
     top: 5rem;
     flex-direction: column;
     transition: 0.3s;
-    background-color: #717ce3;
+    background: #6070ff;
     opacity: 0.9;
     height: 600px;
     width: 90%;
@@ -118,6 +118,7 @@ h1 {
 
   .nav-link {
     color: #fff;
+    font-size: 25px;
   }
 
   .nav-item {
@@ -135,7 +136,7 @@ h1 {
   .hamburger {
     display: block;
     cursor: pointer;
-    background-color: #000;
+    background-color: #6070ff;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -289,6 +290,11 @@ button {
 
 .word-2 {
   margin-right: 40px;
+}
+
+hr {
+  border: 1px solid #ebecf0;
+  width: 80%;
 }
 
 .languages-2 li:nth-child(n) {
