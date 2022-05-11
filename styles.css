@@ -24,7 +24,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: #fff;
 }
 
 .nav-menu {
@@ -38,13 +38,9 @@ a {
 }
 
 .nav-link {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 600;
   color: #475569;
-}
-
-.nav-link:hover {
-  color: #482ff7;
 }
 
 .headline-container {
@@ -67,7 +63,6 @@ h1 {
   margin-bottom: 5px;
   font-size: 40px;
   font-weight: 700;
-  font-style: bold;
   font-family: "Poppins", sans-serif;
 }
 
@@ -109,25 +104,38 @@ h1 {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #fff;
-    width: 100%;
-    border-radius: 10px;
-    text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    background-color: #717ce3;
+    opacity: 0.9;
+    height: 600px;
+    width: 90%;
+    margin-top: -79px;
   }
 
   .nav-menu.active {
     left: 0;
   }
 
+  .nav-link {
+    color: #fff;
+  }
+
   .nav-item {
-    margin: 2.5rem 0;
+    padding-right: 300px;
+  }
+
+  .nav-item1 {
+    margin-top: 70px;
+  }
+
+  .nav-item3 {
+    margin-bottom: 350px;
   }
 
   .hamburger {
     display: block;
     cursor: pointer;
+    background-color: #000;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -216,7 +224,6 @@ h1 {
 }
 
 .name {
-  font-style: bold;
   font-weight: 800;
   font-size: 40px;
   color: #091e42;
@@ -274,7 +281,6 @@ button {
   color: #6070ff;
   letter-spacing: 3%;
   font-size: 15px;
-  text-emphasis-style: medium;
   text-align: center;
   margin-top: 20px;
   list-style: none;
@@ -292,7 +298,6 @@ button {
   background-color: #ebebff;
   color: #6070ff;
   font-size: 15px;
-  text-emphasis-style: medium;
   text-align: center;
   margin-top: 30px;
   list-style: none;
@@ -311,7 +316,6 @@ button {
 .p-text {
   font-size: 15px;
   font-weight: 400;
-  font-style: "Poppins", sans-serif;
   color: #344563;
   vertical-align: text-top;
   line-height: 24px;
@@ -530,7 +534,6 @@ button {
 .about-me {
   background-color: #e5e5e5;
   height: 100vh;
-  max-width: auto;
 }
 
 .me {
@@ -551,7 +554,7 @@ button {
 }
 
 header {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 15px 24px 15px 24px;
   color: #ebebff;
   text-align: center;
@@ -586,7 +589,6 @@ header {
 .start {
   display: flex;
   line-height: 24px;
-  justify-content: baseline;
   justify-content: space-between;
   padding-left: 10px;
   margin-top: 100px;
@@ -597,7 +599,6 @@ header {
   font-size: 20px;
   text-align: left;
   color: #000;
-  vertical-align: center;
   font-weight: 700;
   list-style: none;
 }
@@ -681,7 +682,6 @@ hr.solid {
   .icon li {
     display: inline-block;
     gap: 2px;
-    padding: auto;
     margin: 5px;
   }
 
@@ -730,7 +730,6 @@ hr.solid {
   font-size: 40px;
   line-height: 52px;
   text-align: center;
-  vertical-align: center;
   color: #fff;
 }
 
@@ -833,7 +832,6 @@ button:active {
 @media (max-width: 470px) {
   .contact-part {
     display: block;
-    align-items: left;
     margin-top: 370%;
   }
 
