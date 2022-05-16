@@ -14,16 +14,29 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="toolbar">
-      <nav class="nav-bar">
-        <a href="#"><img src="./images/logo.png" alt="logo" /></a>
-        <ul class="sid-cons">
-          <li class="p">Portoflio</li>
-          <li class="a">About</li>
-          <li class="c">Contact</li>
-          <li class="material-symbols-outlined">menu</li>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#"><img src="./images/logo.png" alt="logo"  class="logo-text"/></a>
+        <ul class="nav-menu">
+          <li class="nav-item nav-item1">
+            <a href="#cards" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item nav-item2">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item nav-item3">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
         </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span> 
+        </div>
       </nav>
+    </header>
+     
+        
     <div class="headline-container">
       <div class="items1">
         <h1 class="items item1">I'm Gasangwa Glad to see you !</h1>
@@ -80,16 +93,15 @@
         </div>
       </div>
     </div>
-    </div>
     <!--html of the middle section-->
-    <section class="middle-section">
+    <section class="middle-section" id="cards">
       <div class="card1">
         <div class="snapshoot">
           <img src="./images/screenshot1.png" alt="screenshot" class="responsive"/>
         </div>
         <div class="word-title">
           <div class="w-title">
-            <h2 class="name">Thomas</h2>
+            <h2 class="name1">Thomas</h2>
             <ul class="canop">
               <li>CANOPY</li>
               <li>Back End Dev</li>
@@ -143,7 +155,7 @@
       </div>
       <div class="card1">
         <div class="snapshooti">
-          <img src="./images/snapshot.png" alt="snapshot" class="responsive" />
+          <img src="./images/snapshot.png" alt="snapshot"/>
         </div>
         <div class="word-title">
           <div class="w-title">
@@ -200,7 +212,7 @@
         </div>
       </div>
     </section>
-    <section class="about-me">
+    <section class="about-me" id="about">
       <div class="me">
         <h2 class="myself">About Myself</h2>
         <p class="hello">
@@ -271,7 +283,7 @@
         </div>
       </div>
     </section>
-    <footer class="contact-part">
+    <footer class="contact-part" id="contact">
       <h2 class="header">Contact me</h2>
       <div class="bodie">
         <div class="text">
@@ -300,6 +312,7 @@
                 name="example@gmail.com"
                 placeholder="example@gmail.com"
                 class="mail"
+                id="mail"
                 required
               />
             </li>
@@ -314,9 +327,10 @@
               ></textarea>
             </li>
           </ul>
-          <button type="submit" class="in-touch">Get it Touch</button>
+          <button type="submit" onclick="validate ()" class="in-touch">Get it Touch</button>
         </form>
       </div>
     </footer>
+<script src="app.js"></script>
 </body>
 </html>
