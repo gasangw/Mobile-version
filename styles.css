@@ -24,7 +24,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #fff;
+  background-color: #6070ff;
 }
 
 .nav-menu {
@@ -48,9 +48,10 @@ a {
 
   display: flex;
   align-content: flex-start;
-  background-image: url(./images/Header\ bck.png);
+  background-image: url(./images/Header\ bck.png), blur(7px);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 h1 {
@@ -98,15 +99,16 @@ h1 {
 
 /* start of media query */
 
-@media (max-width: 470px) {
+@media (max-width: 768px) {
   .nav-menu {
     position: fixed;
     left: -100%;
     top: 5rem;
     flex-direction: column;
     transition: 0.3s;
-    background: #6070ff;
-    opacity: 0.9;
+    background-color: #6070ff;
+    backdrop-filter: blur(6px);
+    mix-blend-mode: multiply;
     height: 600px;
     margin-top: -79px;
   }
@@ -135,7 +137,7 @@ h1 {
   .hamburger {
     display: block;
     cursor: pointer;
-    background-color: #6070ff;
+    background-color: #fff;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -143,11 +145,15 @@ h1 {
   }
 
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
+    background-color: #fff;
+    position: fixed;
   }
 
   .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-5px) rotate(-45deg);
+    background-color: #fff;
+    position: fixed;
   }
 
   h1 {
@@ -159,10 +165,6 @@ h1 {
 
   body {
     overflow-x: hidden;
-  }
-
-  .headline-container {
-    background-size: contain;
   }
 
   .item3 {
@@ -190,7 +192,7 @@ h1 {
 .middle-section {
   background-color: #e5e5e5;
   display: grid;
-  grid-template-columns: 1298px;
+  grid-template-columns: 1228px;
   grid-template-rows: 680px;
   box-sizing: border-box;
   place-items: center;
@@ -224,6 +226,15 @@ h1 {
 }
 
 .name {
+  font-weight: 800;
+  font-size: 40px;
+  color: #091e42;
+  vertical-align: top;
+  line-height: 52px;
+  text-align: left;
+}
+
+.name1 {
   font-weight: 800;
   font-size: 40px;
   color: #091e42;
@@ -339,9 +350,9 @@ hr {
 
 .tap {
   cursor: pointer;
-  padding: 15px;
+  padding: 13px;
   color: #396df2;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   background-color: #fff;
   border-radius: 8px;
@@ -349,7 +360,7 @@ hr {
 }
 
 /* media query for the above card */
-@media (max-width: 470px) {
+@media (max-width: 768px) {
   .middle-section {
     align-items: flex-start;
     flex-direction: column;
@@ -357,15 +368,14 @@ hr {
 
   .card1 {
     display: block;
-    width: 100%;
+    width: 90%;
     background-size: contain;
     height: 80%;
-    margin-left: 10px;
+    margin-right: 80px;
   }
 
   .responsive {
-    width: 15%;
-    height: 25%;
+    width: 360px;
     margin-left: 40px;
     margin-right: auto;
   }
@@ -375,6 +385,12 @@ hr {
     margin-left: 20px;
   }
 
+  .name1 {
+    margin-top: -14px;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
   .languages li:nth-child(n) {
     font-size: 10px;
     margin-left: 20px;
@@ -382,37 +398,35 @@ hr {
 
   .canop li:nth-child(1) {
     margin-left: 20px;
+    margin-top: -50px;
   }
 
   .w-title ul li:nth-child(n + 2) {
     font-size: 9px;
+    margin-top: -30px;
   }
 
   .word {
-    width: 20%;
-    font-size: 10px;
+    width: 50%;
+    font-size: 12px;
     margin-left: 20px;
+    margin-top: -2px;
   }
 
   .word-2 {
     margin-left: 20px;
-    width: 20%;
-    font-size: 10px;
+    width: 25%;
+    font-size: 12px;
   }
 
   .languages {
-    padding-bottom: 0;
-  }
-
-  .tap {
-    width: 10%;
-    height: 3%;
-    font-size: 10px;
+    margin-top: -15px;
   }
 
   button.tap {
-    position: relative;
+    position: absolute;
     margin-left: 80px;
+    margin-top: -30px;
   }
 }
 
@@ -448,7 +462,6 @@ hr {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding-left: 48px;
 }
 
 .snapshooti img {
@@ -487,29 +500,27 @@ hr {
 
 /* media quries for the above code begin from here */
 
-@media (max-width: 470px) {
+@media (max-width: 768px) {
   .card2 {
     display: block;
-    width: 100%;
     background-size: contain;
     height: 80%;
-    margin-left: 10px;
+    margin-right: 20px;
   }
 
   .snapt img {
-    width: 35%;
-    height: 25%;
-    margin-left: 80px;
-    margin-right: auto;
+    width: 360px;
+    height: 278px;
+    margin-left: 30px;
+    margin-right: 10px;
   }
 
   .languages-2 li:nth-child(n) {
     font-size: 10px;
-    margin-right: 0;
+    margin-top: -20px;
   }
 
   .languages-2 {
-    padding-bottom: 40px;
     padding-left: 10px;
   }
 
@@ -527,10 +538,9 @@ hr {
   }
 
   .snapshooti img {
-    width: 20%;
-    height: 25%;
-    margin-left: 40px;
-    margin-right: auto;
+    width: 390px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -651,7 +661,7 @@ hr.solid {
 .press {
   margin-left: 80px;
   cursor: pointer;
-  margin-bottom: 168px;
+  margin-bottom: 150px;
   width: 30%;
   padding: 10px;
   background-color: #fff;
@@ -663,7 +673,7 @@ hr.solid {
 }
 
 /* media query for about me */
-@media (max-width: 470px) {
+@media (max-width: 768px) {
   .me {
     column-count: 1;
     display: block;
@@ -672,16 +682,19 @@ hr.solid {
   .myself {
     font-size: 20px;
     line-height: 20px;
+    margin-left: 50px;
   }
 
   .hello {
     font-size: 15px;
     display: flex;
-    width: 50%;
+    width: 60%;
+    margin-left: 50px;
   }
 
   .connect {
     font-size: 10px;
+    margin-left: 50px;
   }
 
   .icon li {
@@ -692,8 +705,10 @@ hr.solid {
 
   .press {
     width: 30%;
+    margin-left: 50px;
+    padding: 6px;
+    font-size: 14px;
     margin-bottom: 90px;
-    margin-left: 60px;
   }
 
   .start {
@@ -709,10 +724,6 @@ hr.solid {
 
   .icon li img {
     width: 50%;
-  }
-
-  .end {
-    margin-bottom: 60px;
   }
 }
 
@@ -834,10 +845,10 @@ button:active {
 
 /* media query for the contact-part */
 
-@media (max-width: 470px) {
+@media (max-width: 768px) {
   .contact-part {
     display: block;
-    margin-top: 370%;
+    margin-top: 169%;
   }
 
   .text {
