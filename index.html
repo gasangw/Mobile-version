@@ -121,7 +121,7 @@
               <li>javaScript</li>
             </ul>
           </div>
-          <button type="submit" class="tap">See Project</button>
+          <button type="submit" id="pj1" class="tap">See Project</button>
         </div>
       </div>
       <div class="card2">
@@ -150,7 +150,7 @@
               <li>javaScript</li>
             </ul>
           </div>
-          <button type="submit" class="blind">See Project</button>
+          <button type="submit" id="pj2" class="blind">See Project</button>
         </div>
       </div>
       <div class="card1">
@@ -179,7 +179,7 @@
               <li>javaScript</li>
             </ul>
           </div>
-          <button type="submit" class="see">See Project</button>
+          <button type="submit"  id="pj3"class="see">See Project</button>
         </div>
       </div>
       <div class="card2">
@@ -208,7 +208,7 @@
               <li>javaScript</li>
             </ul>
           </div>
-          <button type="submit" class="blind">See Project</button>
+          <button type="submit" id="pj4" class="blind">See Project</button>
         </div>
       </div>
     </section>
@@ -293,7 +293,7 @@
             to help with it
           </p>
         </div>
-        <form action="https://formspree.io/f/mjvlpwbr" method="post">
+        <form action="https://formspree.io/f/mjvlpwbr" method="POST" id="form">
           <ul class="formie">
             <li>
               <input
@@ -312,12 +312,12 @@
                 name="example@gmail.com"
                 placeholder="example@gmail.com"
                 class="mail"
-                id="mail"
+                id="email"
                 required
               />
             </li>
             <li>
-              <textarea
+              <textarea 
                 name="message"
                 maxlength="500"
                 placeholder="Write your message here"
@@ -327,7 +327,8 @@
               ></textarea>
             </li>
           </ul>
-          <button type="submit" onclick="validate ()" class="in-touch">Get it Touch</button>
+          <p id ="warning-message" class="form-warning-message"></p>
+          <button id="submit" type="submit" class="in-touch" onclick="testValidation();">Get it Touch</button>
         </form>
       </div>
     </footer>
@@ -379,5 +380,6 @@
 </section>
     <!--pop-up card ends from here-->
 <script src="app.js"></script>
+<script src="validation.js"></script>
 </body>
 </html>
