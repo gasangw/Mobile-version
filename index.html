@@ -121,7 +121,7 @@
               <li>javaScript</li>
             </ul>
           </div>
-          <button type="submit" class="tap">See Project</button>
+          <button type="submit" id="pj1" class="tap">See Project</button>
         </div>
       </div>
       <div class="card2">
@@ -150,7 +150,7 @@
               <li>javaScript</li>
             </ul>
           </div>
-          <button type="submit" class="blind">See Project</button>
+          <button type="submit" id="pj2" class="blind">See Project</button>
         </div>
       </div>
       <div class="card1">
@@ -179,7 +179,7 @@
               <li>javaScript</li>
             </ul>
           </div>
-          <button type="submit" class="see">See Project</button>
+          <button type="submit" id="pj3" class="see">See Project</button>
         </div>
       </div>
       <div class="card2">
@@ -208,7 +208,7 @@
               <li>javaScript</li>
             </ul>
           </div>
-          <button type="submit" class="blind">See Project</button>
+          <button type="submit" id="pj4" class="blind">See Project</button>
         </div>
       </div>
     </section>
@@ -293,7 +293,7 @@
             to help with it
           </p>
         </div>
-        <form action="https://formspree.io/f/mjvlpwbr" method="post">
+        <form action="https://formspree.io/f/mjvlpwbr" method="POST" id="form">
           <ul class="formie">
             <li>
               <input
@@ -312,12 +312,12 @@
                 name="example@gmail.com"
                 placeholder="example@gmail.com"
                 class="mail"
-                id="mail"
+                id="email"
                 required
               />
             </li>
             <li>
-              <textarea
+              <textarea 
                 name="message"
                 maxlength="500"
                 placeholder="Write your message here"
@@ -327,10 +327,59 @@
               ></textarea>
             </li>
           </ul>
-          <button type="submit" onclick="validate ()" class="in-touch">Get it Touch</button>
+          <p id ="warning-message" class="form-warning-message"></p>
+          <button id="submit" type="submit" class="in-touch" onclick="testValidation();">Get it Touch</button>
         </form>
       </div>
     </footer>
+
+    <!--pop-up card starts from here-->
+    <section class="popUp">
+      <div class="top">
+          <header class="header12">
+              <div class="major">
+                <h2 class="person">Tonic</h2>
+                <img src="./images/IconCancel.png" alt="a cross" class="cross"/>
+              </div>
+              <div class="sector">
+                <ul class="lists">
+                  <li class="list1">CANOPY</li>
+                  <li class="list2">Back End Dev</li>
+                  <li class="list3">2015</li>
+                </ul>
+              </div>
+          </header>
+          <div class="imgi">
+            <img src="./images/Portfolio.png" alt="snapshoot" class="responsive1"/>
+          </div>
+        <div class="content"> 
+          <p class="text2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
+            <div class="langu">
+                <ul class="languages3">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javaScript</li>
+                    <li>github</li>
+                    <li>ruby</li>
+                    <li>Bootstrap</li>
+                </ul>
+                <hr class="strike">
+              <div class="links">
+              <a href="#" class="demo">
+                <p>See live</p>
+                <img src="./images/Icon.png" alt="vector" class="imo"/>
+              </a>
+             <a href="#" class="demo">
+                <p>See Source</p>
+                <img src="./images/vic2.png" alt="vector" class="imo"/>
+              </a>  
+              </div> 
+            </div>
+        </div>
+  </div>
+</section>
+    <!--pop-up card ends from here-->
 <script src="app.js"></script>
+<script src="validation.js"></script>
 </body>
 </html>
