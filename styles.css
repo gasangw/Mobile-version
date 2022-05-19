@@ -897,6 +897,11 @@ button:active {
   background-color: #c1c7d0;
   backdrop-filter: blur(6px);
   mix-blend-mode: multiply;
+  transform: scale(0);
+}
+
+.popUp.active {
+  transform: scale(1);
 }
 
 .top {
