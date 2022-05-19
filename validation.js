@@ -15,3 +15,35 @@ document.querySelector('#form').addEventListener('submit', (e) => {
     responseContainer.style.color = 'yellow';
   }
 });
+
+// Local storage
+const userNameInput = document.getElementById('name');
+const userEmailInput = document.getElementById('email');
+const userMessageInput = document.querySelector('.typing');
+const formDetails = JSON.parse(localStorage.getItem('formDetails'));
+if (formDetails) {
+  userNameInput.value = formDetails.name;
+  userEmailInput.value = formDetails.email;
+  userMessageInput.value = formDetails.message;
+}
+
+const form = document.getElementById('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const userName = userNameInput.value.trim();
+  const userEmail = userEmailInput.value.trim();
+  const userMessage = userMessageInput.value.trim();
+
+  if (!userName || !userEmail || !userMessage) {
+    return;
+  }
+
+  const formDetails = {
+    name: userName,
+    email: userEmail,
+    message: userMessage,
+  };
+
+  localStorage.setItem('formDetails', JSON.stringify(formDetails));
+});
