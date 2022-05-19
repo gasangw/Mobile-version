@@ -20,3 +20,10 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 const userNameInput = document.getElementById('name');
 const userEmailInput = document.getElementById('email');
 const userMessageInput = document.querySelector('.typing');
+
+const formDetails = JSON.parse(localStorage.getItem('formDetails'));
+if (formDetails) {
+  userNameInput.value = formDetails.name;
+  userEmailInput.value = formDetails.email;
+  userMessageInput.value = formDetails.message;
+}
