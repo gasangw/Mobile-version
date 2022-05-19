@@ -14,6 +14,7 @@ document.querySelector('#form').addEventListener('submit', (e) => {
     responseContainer.innerText = 'Email provided is invalid: Please your email address should be in lower case only !';
     responseContainer.style.color = 'yellow';
   }
+
 });
 
 // Local storage
@@ -46,4 +47,6 @@ form.addEventListener('submit', (event) => {
   };
 
   localStorage.setItem('formDetails', JSON.stringify(formDetails));
+});
+
 });
