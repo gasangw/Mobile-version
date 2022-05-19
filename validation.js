@@ -48,5 +48,3 @@ form.addEventListener('submit', (event) => {
 
   localStorage.setItem('formDetails', JSON.stringify(formDetails));
 });
-
-});
