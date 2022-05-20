@@ -43,7 +43,7 @@ const myCards = [`<div class="snapshoot">
     <li>javaScript</li>
   </ul>
 </div>
-<button type="submit" id="pj1" class="tap">See Project</button>
+<button type="submit" id="pj1" class="tap" onclick="showPopUp()">See Project</button>
 </div>`, `<div class="snapt">
 <img src="./images/snapshot4.png" alt="snapshot" class="responsive"/>
 </div>
@@ -69,7 +69,7 @@ const myCards = [`<div class="snapshoot">
     <li>javaScript</li>
   </ul>
 </div>
-<button type="submit" id="pj2" class="blind">See Project</button>
+<button type="submit" id="pj2" class="blind" onclick="showPopUp()">See Project</button>
 </div>`, `<div class="snapshooti">
 <img src="./images/snapshot.png" alt="snapshot"/>
 </div>
@@ -95,7 +95,7 @@ const myCards = [`<div class="snapshoot">
     <li>javaScript</li>
   </ul>
 </div>
-<button type="submit" id="pj3" class="see">See Project</button>
+<button type="submit" id="pj3" class="see" onclick="showPopUp()">See Project</button>
 </div>`, `<div class="snapt">
 <img src="./images/snapshot2.png" alt="snapshot" class="responsive">
 </div>
@@ -121,7 +121,7 @@ const myCards = [`<div class="snapshoot">
     <li>javaScript</li>
   </ul>
 </div>
-<button type="submit" id="pj4" class="blind">See Project</button>
+<button type="submit" id="pj4" class="blind"  onclick="showPopUp()">See Project</button>
 </div>`];
 function getCards(n) {
   const card1 = document.createElement('div');
@@ -142,5 +142,77 @@ for (let i = 0; i < 4; i += 1) {
 }
 const about = document.getElementById('about');
 about.parentNode.insertBefore(sect, about);
+
+/// =========
+function addHeader () {
+  const header = document.createElement('header');
+  header.className = 'header12';
+  header.innerHTML=`<div class="major">
+  <h2 class="person">Tonic</h2>
+  <img src="./images/IconCancel.png" alt="a cross" class="cross" onclick="closeModal()"/>
+</div>
+<div class="sector">
+  <ul class="lists">
+    <li class="list1">CANOPY</li>
+    <li class="list2">Back End Dev</li>
+    <li class="list3">2015</li>
+  </ul>
+</div>`;
+  return header;
+}
+
+function addImgi () {
+  const imgi = document.createElement('div');
+  imgi.className = 'imgi';
+  imgi.innerHTML=`<img src="./images/Portfolio.png" alt="snapshoot" class="responsive1"/>`;
+  return imgi;
+}
+
+function addContent () {
+  const content = document.createElement('div');
+  content.className = 'content';
+  content.innerHTML=`<p class="text2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
+  <div class="langu">
+      <ul class="languages3">
+          <li>html</li>
+          <li>css</li>
+          <li>javaScript</li>
+          <li>github</li>
+          <li>ruby</li>
+          <li>Bootstrap</li>
+      </ul>
+      <hr class="strike">
+    <div class="links">
+    <a href="#" class="demo">
+      <p>See live</p>
+      <img src="./images/Icon.png" alt="vector" class="imo"/>
+    </a>
+   <a href="#" class="demo">
+      <p>See Source</p>
+      <img src="./images/vic2.png" alt="vector" class="imo"/>
+    </a>  
+    </div> 
+  </div>`;
+  return content;
+}
+
+const sectionPopUp = document.createElement('section');
+
+function showPopUp() {
+const modProjects = { header: addHeader(), content: addContent(), imgi: addImgi() };
+const modalPopUp = document.createElement('section');
+const divTop = document.createElement('div');
+divTop.className = 'top';
+divTop.appendChild(modProjects.header);
+divTop.appendChild(modProjects.content);
+divTop.appendChild(modProjects.imgi);
+sectionPopUp.className = 'popUp';
+sectionPopUp.appendChild(divTop);
+document.body.appendChild(sectionPopUp);
+}
+
+function closeModal() {
+  document.body.removeChild(sectionPopUp);
+}
 
 

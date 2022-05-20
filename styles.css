@@ -916,20 +916,19 @@ button:active {
 
 /* styling for pop-up window in the desktop version */
 .popUp {
-  position: absolute;
+  display: flex;
+  position: fixed;
+  top : 0;
+  left : 0;
   width: 100%;
   max-height: 1577px;
   background-color: #c1c7d0;
-  backdrop-filter: blur(6px);
-  mix-blend-mode: multiply;
-  transform: scale(0);
-}
-
-.popUp.active {
-  transform: scale(1);
+  /* backdrop-filter: blur(6px);
+  mix-blend-mode: multiply; */
 }
 
 .top {
+  display: flex;
   background-color: #fff;
   border-radius: 16px;
   margin: 77px 142px;
@@ -1041,6 +1040,7 @@ button:active {
 /* media query for pop-up window */
 @media (max-width: 768px) {
   .popUp {
+    display: flex;
     position: absolute;
     min-width: 375px;
     min-height: 823px;
