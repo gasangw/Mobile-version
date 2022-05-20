@@ -133,18 +133,6 @@ function getCards(n) {
   card1.innerHTML = myCards[n];
   return card1;
 }
-/* const card1 = document.createElement('div');
-card1.className = 'card1';
-card1.innerHTML = myCards[0];
-const card2 = document.createElement('div');
-card2.className = 'card2';
-card2.innerHTML = myCards[1];
-const card3 = document.createElement('div');
-card3.className = 'card1';
-card3.innerHTML = myCards[2];
-const card4 = document.createElement('div');
-card4.className = 'card2';
-card4.innerHTML = myCards[3]; */
 
 const sect = document.createElement('section');
 sect.className = 'middle-section';
@@ -154,3 +142,5 @@ for (let i = 0; i < 4; i += 1) {
 }
 const about = document.getElementById('about');
 about.parentNode.insertBefore(sect, about);
+
+
