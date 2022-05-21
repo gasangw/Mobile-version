@@ -1,3 +1,7 @@
+.scrollLock {
+  overflow: hidden;
+}
+
 li {
   list-style: none;
 }
@@ -52,7 +56,7 @@ a {
 
   display: flex;
   align-content: flex-start;
-  background-image: url(./images/Header\ bck.png), blur(7px);
+  background-image: url(./images/Header\ bck.png);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -159,6 +163,7 @@ h1 {
     background-color: #fff;
     position: fixed;
   }
+
   h1 {
     max-width: 350px;
     margin-left: 25px;
@@ -609,7 +614,6 @@ hr {
 
 header {
   font-family: 'Poppins', sans-serif;
-  margin: 15px 24px 15px 24px;
   color: #ebebff;
   text-align: center;
   vertical-align: top;
@@ -916,22 +920,21 @@ button:active {
 
 /* styling for pop-up window in the desktop version */
 .popUp {
-  display: flex;
   position: fixed;
-  top : 0;
-  left : 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-height: 1577px;
-  background-color: #c1c7d0;
-  /* backdrop-filter: blur(6px);
-  mix-blend-mode: multiply; */
+  height: 100vh;
+  background-image: url(./images/mcDesktop.png);
+  backdrop-filter: blur(7px);
 }
 
 .top {
-  display: flex;
   background-color: #fff;
   border-radius: 16px;
-  margin: 77px 142px;
+  margin: -20px 130px;
+  height: 750px;
+  width: 870px;
 }
 
 .major {
@@ -945,6 +948,7 @@ button:active {
   font-size: 40px;
   line-height: 52px;
   color: #091e42;
+  margin-left: 85px;
 }
 
 .cross {
@@ -956,7 +960,7 @@ button:active {
 
 .lists {
   display: flex;
-  margin: -30px 0 20px -30px;
+  margin: -30px 0 20px 50px;
   align-self: baseline;
 }
 
@@ -978,9 +982,9 @@ button:active {
 }
 
 .responsive1 {
-  width: 95%;
-  margin-left: 25px;
-  margin-top: 20px;
+  width: 750px;
+  height: 310px;
+  margin-left: 85px;
 }
 
 .content {
@@ -991,30 +995,28 @@ button:active {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 20px;
   color: #344563;
-  width: 80%;
-  margin-left: 25px;
-  margin-top: 40px;
-  margin-bottom: 120px;
+  margin-left: 85px;
+  margin-top: 10px;
+  width: 90%;
 }
 
 .languages3 {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 60px;
   gap: 10px;
+  width: 80%;
 }
 
 .langu {
-  width: 30%;
+  width: 50%;
 }
 
 .links {
   display: flex;
-  margin-left: 30px;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  margin-left: 10px;
 }
 
 .demo {
@@ -1041,32 +1043,38 @@ button:active {
 @media (max-width: 768px) {
   .popUp {
     display: flex;
-    position: absolute;
-    min-width: 375px;
-    min-height: 823px;
+    position: fixed;
+    top: 0;
+    min-width: 650px;
+    min-height: 790px;
+    align-items: flex-start;
+    background-image: url(./images/Group55.png);
+    background-size: cover;
   }
 
   .top {
-    margin: 30px 20px;
-    max-height: 760px;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
-    gap: 12px;
+    gap: 8px;
+    height: 750px;
+    width: 550px;
+    margin-left: 70px;
   }
 
   .person {
     font-weight: 700;
     font-size: 30px;
     line-height: 44px;
-    margin-right: 35px;
+    margin-right: 50px;
     margin-top: 10px;
+    margin-left: 10px;
   }
 
   .cross {
     margin-top: 18px;
-    margin-left: 250px;
+    margin-left: 300px;
   }
 
   .sector {
@@ -1075,6 +1083,9 @@ button:active {
 
   .responsive1 {
     margin-top: -10px;
+    width: 465px;
+    height: 260px;
+    margin-left: 20px;
   }
 
   .content {
@@ -1085,11 +1096,15 @@ button:active {
     margin-top: -8px;
     font-size: 13px;
     line-height: 18px;
-    width: 90%;
+    margin-left: 35px;
   }
 
   .langu {
-    margin-top: -110px;
+    margin-top: -9px;
+  }
+
+  .lists {
+    margin: -30px 0 20px -26px;
   }
 
   .languages3 {
@@ -1106,12 +1121,12 @@ button:active {
   .links {
     justify-content: space-between;
     padding: 5px;
-    margin-top: 20px;
+    margin-top: 5px;
   }
 
   hr.strike {
-    width: 410px;
-    margin-left: 20px;
+    width: 455px;
+    margin-left: 25px;
   }
 
   a.demo {

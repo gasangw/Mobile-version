@@ -144,10 +144,10 @@ const about = document.getElementById('about');
 about.parentNode.insertBefore(sect, about);
 
 /// =========
-function addHeader () {
+function addHeader() {
   const header = document.createElement('header');
   header.className = 'header12';
-  header.innerHTML=`<div class="major">
+  header.innerHTML = `<div class="major">
   <h2 class="person">Tonic</h2>
   <img src="./images/IconCancel.png" alt="a cross" class="cross" onclick="closeModal()"/>
 </div>
@@ -161,17 +161,17 @@ function addHeader () {
   return header;
 }
 
-function addImgi () {
+function addImgi() {
   const imgi = document.createElement('div');
   imgi.className = 'imgi';
-  imgi.innerHTML=`<img src="./images/Portfolio.png" alt="snapshoot" class="responsive1"/>`;
+  imgi.innerHTML = '<img src="./images/Portfolio.png" alt="snapshoot" class="responsive1"/>';
   return imgi;
 }
 
-function addContent () {
+function addContent() {
   const content = document.createElement('div');
   content.className = 'content';
-  content.innerHTML=`<p class="text2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
+  content.innerHTML = `<p class="text2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
   <div class="langu">
       <ul class="languages3">
           <li>html</li>
@@ -183,11 +183,11 @@ function addContent () {
       </ul>
       <hr class="strike">
     <div class="links">
-    <a href="#" class="demo">
+    <a href="https://gasangw.github.io/Mobile-version" class="demo">
       <p>See live</p>
       <img src="./images/Icon.png" alt="vector" class="imo"/>
     </a>
-   <a href="#" class="demo">
+   <a href="https://github.com/gasangw/Mobile-version" class="demo">
       <p>See Source</p>
       <img src="./images/vic2.png" alt="vector" class="imo"/>
     </a>  
@@ -197,22 +197,22 @@ function addContent () {
 }
 
 const sectionPopUp = document.createElement('section');
-
+/* eslint-disable */
 function showPopUp() {
-const modProjects = { header: addHeader(), content: addContent(), imgi: addImgi() };
-const modalPopUp = document.createElement('section');
-const divTop = document.createElement('div');
-divTop.className = 'top';
-divTop.appendChild(modProjects.header);
-divTop.appendChild(modProjects.content);
-divTop.appendChild(modProjects.imgi);
-sectionPopUp.className = 'popUp';
-sectionPopUp.appendChild(divTop);
-document.body.appendChild(sectionPopUp);
+  const modProjects = { header: addHeader(), imgi: addImgi(), content: addContent() };
+  const divTop = document.createElement('div');
+  divTop.className = 'top';
+  divTop.appendChild(modProjects.header);
+  divTop.appendChild(modProjects.imgi);
+  divTop.appendChild(modProjects.content);
+  sectionPopUp.className = 'popUp';
+  sectionPopUp.appendChild(divTop);
+  document.body.classList.toggle('scrollLock');
+  document.body.appendChild(sectionPopUp);
 }
 
 function closeModal() {
   document.body.removeChild(sectionPopUp);
+  document.body.classList.toggle('scrollLock');
 }
-
-
+/* eslint-enable */
