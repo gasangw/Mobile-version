@@ -413,8 +413,8 @@ hr {
   }
 
   .responsive {
-    width: 450px;
-    margin-left: 40px;
+    width: 90%;
+    margin-left: 10px;
     margin-right: auto;
   }
 
@@ -579,7 +579,7 @@ hr {
 
   .see {
     width: 50%;
-    margin-top: -60px;
+    margin-top: -120px;
   }
 
   .snapshooti img {
@@ -932,7 +932,7 @@ button:active {
   background-color: #fff;
   border-radius: 16px;
   margin: -20px 130px;
-  height: 750px;
+  height: 790px;
   width: 870px;
 }
 
@@ -981,7 +981,7 @@ button:active {
 }
 
 .responsive1 {
-  width: 750px;
+  width: 88%;
   height: 310px;
   margin-left: 85px;
 }
@@ -998,13 +998,14 @@ button:active {
   color: #344563;
   margin-left: 85px;
   margin-top: 10px;
+  margin-bottom: 20px;
   width: 90%;
 }
 
 .languages3 {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 10px;
   gap: 10px;
   width: 80%;
 }
@@ -1044,7 +1045,7 @@ button:active {
     display: flex;
     position: fixed;
     top: 0;
-    min-width: 650px;
+    min-width: 90%;
     min-height: 790px;
     align-items: flex-start;
     background-image: url(./images/Group55.png);

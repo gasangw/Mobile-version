@@ -43,7 +43,7 @@ const myCards = [`<div class="snapshoot">
     <li>javaScript</li>
   </ul>
 </div>
-<button type="submit" id="pj1" class="tap" onclick="showPopUp()">See Project</button>
+<button type="submit" id="pj1" class="tap btn-modal" onclick="showPopUp()">See Project</button>
 </div>`, `<div class="snapt">
 <img src="./images/snapshot4.png" alt="snapshot" class="responsive"/>
 </div>
@@ -69,7 +69,7 @@ const myCards = [`<div class="snapshoot">
     <li>javaScript</li>
   </ul>
 </div>
-<button type="submit" id="pj2" class="blind" onclick="showPopUp()">See Project</button>
+<button type="submit" id="pj2" class="blind btn-modal" onclick="showPopUp()">See Project</button>
 </div>`, `<div class="snapshooti">
 <img src="./images/snapshot.png" alt="snapshot"/>
 </div>
@@ -95,7 +95,7 @@ const myCards = [`<div class="snapshoot">
     <li>javaScript</li>
   </ul>
 </div>
-<button type="submit" id="pj3" class="see" onclick="showPopUp()">See Project</button>
+<button type="submit" id="pj3" class="see btn-modal" onclick="showPopUp()">See Project</button>
 </div>`, `<div class="snapt">
 <img src="./images/snapshot2.png" alt="snapshot" class="responsive">
 </div>
@@ -121,7 +121,7 @@ const myCards = [`<div class="snapshoot">
     <li>javaScript</li>
   </ul>
 </div>
-<button type="submit" id="pj4" class="blind"  onclick="showPopUp()">See Project</button>
+<button type="submit" id="pj4" class="blind btn-modal"  onclick="showPopUp()">See Project</button>
 </div>`];
 function getCards(n) {
   const card1 = document.createElement('div');
@@ -149,7 +149,7 @@ function addHeader() {
   header.className = 'header12';
   header.innerHTML = `<div class="major">
   <h2 class="person">Tonic</h2>
-  <img src="./images/IconCancel.png" alt="a cross" class="cross" onclick="closeModal()"/>
+  <img src="./images/IconCancel.png" alt="a cross" class="cross" id="modalClose" onclick="closeModal()"/>
 </div>
 <div class="sector">
   <ul class="lists">
@@ -197,7 +197,12 @@ function addContent() {
 }
 
 const sectionPopUp = document.createElement('section');
-/* eslint-disable */
+
+function closeModal() {
+  document.body.removeChild(sectionPopUp);
+  document.body.classList.toggle('scrollLock');
+}
+
 function showPopUp() {
   const modProjects = { header: addHeader(), imgi: addImgi(), content: addContent() };
   const divTop = document.createElement('div');
@@ -209,10 +214,14 @@ function showPopUp() {
   sectionPopUp.appendChild(divTop);
   document.body.classList.toggle('scrollLock');
   document.body.appendChild(sectionPopUp);
+  document.getElementById('btn-modal').addEventListener('click', closeModal);
 }
 
-function closeModal() {
-  document.body.removeChild(sectionPopUp);
-  document.body.classList.toggle('scrollLock');
-}
-/* eslint-enable */
+// // | Add Click Event Listners to Project Buttons
+const btns = Array.from(document.getElementsByClassName('btn-modal'));
+btns.forEach((btn) => {
+  btn.addEventListener('click', (event) => {
+    showPopUp(btn.id);
+    event.stopPropagation();
+  });
+});
