@@ -3,7 +3,7 @@ const navMenu = document.querySelector('.nav-menu');
 const headlineContainer = document.querySelector('.headline-container');
 
 // eslint-disable-next-line no-use-before-define
-hamburger.addEventListener('click', mobileMenu);
+hamburger.addEventListener(click, mobileMenu);
 
 function mobileMenu() {
   hamburger.classList.toggle('active');
